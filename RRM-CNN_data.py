@@ -1,4 +1,6 @@
 """
+Used to convert electron-ion interaction potentials of the amino acid chains into list of numerics to be used throughout the rest of the repository & project.
+
 np.conv():
     
 pep = [peptide eiip array]
