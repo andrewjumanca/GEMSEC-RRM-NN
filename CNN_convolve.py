@@ -3,6 +3,9 @@
 Created on Tue May 26 15:59:27 2020
 
 @author: Andrew
+
+Reads numerical data from csv and convolves EIIP values of each protein and peptide to output lists of convolution values
+intended to be training/testing data for the neural network model.
 """
 
 
@@ -22,24 +25,3 @@ for seq in rawdata["conv_length"]:
     count= count + 1
 
 rawdata.to_csv('CNN_with_EIIP.csv', index = False)
-
-
-
-# =============================================================================
-# x = [0.0829, 0.0829, 0.1263, 0.0373, 0.0946, 0.0516, 0.0198, 0.0946, 0.0516, 0.0829]
-# y = []
-# 
-# convolution_same = np.convolve(x, y, mode = 'same')
-# axis = np.linspace(0, len(y), len(y))
-# plt.plot(axis, convolution_same)
-# plt.xlabel("domain")
-# plt.ylabel("same conv.")
-# plt.show()
-# 
-# convolution_full = np.convolve(x, y, mode = 'full')
-# axis = np.linspace(0, len(convolution_full), len(convolution_full))
-# plt.plot(axis, convolution_full)
-# plt.xlabel("domain")
-# plt.ylabel("full conv.")
-# plt.show()
-# =============================================================================
